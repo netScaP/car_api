@@ -9,6 +9,7 @@ import carSerie from './car_serie/car_serie.service';
 import carCharacteristicValue from './car_characteristic_value/car_characteristic_value.service';
 import carEquipment from './car_equipment/car_equipment.service';
 import carGeneration from './car_generation/car_generation.service';
+import carInfo from './car-info/car-info.service';
 // Don't remove this comment. It's needed to format import lines nicely.
 
 export default function (app: Application): void {
@@ -22,4 +23,5 @@ export default function (app: Application): void {
   app.configure(carCharacteristicValue);
   app.configure(carEquipment);
   app.configure(carGeneration);
+  app.configure(carInfo);
 }
