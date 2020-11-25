@@ -1,13 +1,14 @@
+import search from '../../hooks/search';
 
 export default {
   before: {
     all: [],
-    find: [],
+    find: [search({ fields: ['name'] })],
     get: [],
     create: [],
     update: [],
     patch: [],
-    remove: []
+    remove: [],
   },
 
   after: {
@@ -17,7 +18,7 @@ export default {
     create: [],
     update: [],
     patch: [],
-    remove: []
+    remove: [],
   },
 
   error: {
@@ -27,6 +28,6 @@ export default {
     create: [],
     update: [],
     patch: [],
-    remove: []
-  }
+    remove: [],
+  },
 };
