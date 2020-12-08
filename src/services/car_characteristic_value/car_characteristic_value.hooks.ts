@@ -1,10 +1,10 @@
-import { alterItems } from 'feathers-hooks-common';
+import { alterItems, disablePagination } from 'feathers-hooks-common';
 import { HookContext } from '../../app';
 
 export default {
   before: {
     all: [],
-    find: [],
+    find: [disablePagination()],
     get: [],
     create: [],
     update: [],

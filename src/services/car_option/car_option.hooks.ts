@@ -1,9 +1,10 @@
+import { disablePagination } from 'feathers-hooks-common';
 import search from '../../hooks/search';
 
 export default {
   before: {
     all: [],
-    find: [search({ fields: ['name'] })],
+    find: [disablePagination(), search({ fields: ['name'] })],
     get: [],
     create: [],
     update: [],
